@@ -1,25 +1,29 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1>Edit Task</h1>
-    <form action="{{ route('tasks.update', $task->id) }}" method="POST">
+<div class="bg-white shadow-md rounded p-6">
+    <h1 class="text-2xl font-bold mb-4">Edit Task</h1>
+    <form action="{{ route('tasks.update', $task->id) }}" method="POST" class="space-y-4">
         @csrf
         @method('PUT')
-        <div class="mb-3">
-            <label class="form-label">Title</label>
-            <input type="text" name="title" class="form-control" value="{{ $task->title }}" required>
+        <div>
+            <label class="block font-medium">Title</label>
+            <input type="text" name="title" value="{{ $task->title }}" class="w-full border rounded p-2" required>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Description</label>
-            <textarea name="description" class="form-control">{{ $task->description }}</textarea>
+        <div>
+            <label class="block font-medium">Description</label>
+            <textarea name="description" class="w-full border rounded p-2">{{ $task->description }}</textarea>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Completed</label>
-            <input type="checkbox" name="is_completed" value="1" {{ $task->is_completed ? 'checked' : '' }}>
+        <div>
+            <label class="inline-flex items-center">
+                <input type="checkbox" name="is_completed" value="1" {{ $task->is_completed ? 'checked' : '' }} class="mr-2">
+                Completed
+            </label>
         </div>
-        <button type="submit" class="btn btn-primary">Update Task</button>
-        <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Cancel</a>
+        <div class="flex space-x-2">
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Update Task</button>
+            <a href="{{ route('tasks.index') }}" class="bg-gray-500 text-white px-4 py-2 rounded">Cancel</a>
+        </div>
     </form>
 </div>
 @endsection

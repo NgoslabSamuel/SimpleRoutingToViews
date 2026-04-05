@@ -4,29 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laravel Task Manager</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('tasks.index') }}">Task Manager</a>
+    <nav class="bg-gray-800 p-4 mb-6">
+        <div class="container mx-auto">
+            <a class="text-white font-bold text-lg" href="{{ route('tasks.index') }}">Task Manager</a>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <main class="container">
+    <main class="container mx-auto px-4">
         @if(session('success'))
-            <div class="alert alert-success">
+            <div class="bg-green-100 text-green-800 p-3 rounded mb-4">
                 {{ session('success') }}
             </div>
         @endif
 
         @yield('content')
     </main>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
