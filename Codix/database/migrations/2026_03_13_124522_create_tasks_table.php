@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-         Schema::create('tasks', function (Blueprint $table) {
-              $table->id(); // Auto-incrementing primary key
-              $table->string('title'); // Title of the task
-              $table->text('description')->nullable(); // Optional description
-              $table->boolean('is_completed')->default(false); // Track completion
-              $table->timestamps(); // created_at and updated_at
-       });
+        Schema::create('tasks', function (Blueprint $table) {
+            $table->id(); // Auto-incrementing primary key
+            $table->string('title'); // Title of the task
+            $table->text('description')->nullable(); // Optional description
+            $table->boolean('is_completed')->default(false); // Track completion
+            $table->timestamps(); // Created at and updated at
+        });
     }
 
     /**
