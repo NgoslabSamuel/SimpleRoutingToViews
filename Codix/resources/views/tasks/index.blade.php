@@ -9,7 +9,7 @@
        + Add Task
     </a>
 
-    <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+    <div class="overflow-x-auto bg-white shadow-lg rounded-xl border boder-gray-100">
         <table class="min-w-full border border-gray-200">
             <thead class="bg-gray-100">
                 <tr>
@@ -21,11 +21,11 @@
             </thead>
             <tbody>
                 @foreach($tasks as $task)
-                <tr class="hover:bg-gray-50">
+                <tr class="hover:bg-gray-50 odd:bg-gray-50 even:bg-white">
                     <td class="px-4 py-2 border-b text-gray-800">{{ $task->title }}</td>
                     <td class="px-4 py-2 border-b text-gray-600">{{ $task->description }}</td>
                     <td class="px-4 py-2 border-b">
-                        <span class="{{ $task->is_completed ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700' }} px-2 py-1 rounded text-sm font-medium">
+                        <span class="{{ $task->is_completed ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700' }} px-2 py-1 rounded text-xs font-semibold uppercase tracking-wide">
                             {{ $task->is_completed ? 'Completed' : 'New' }}
                         </span>
                     </td>

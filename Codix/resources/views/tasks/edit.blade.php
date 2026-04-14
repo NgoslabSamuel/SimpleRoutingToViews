@@ -20,13 +20,13 @@
         </div>
         <div class="flex items-center space-x-2">
             <input type="checkbox" name="is_completed" value="1" 
-                   class="h-4 w-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"
+                   class="h-5 w-5 text-indigo-600 border-gray-300 rounded-md focus:ring-2 focus:ring-indigo-500"
                    {{ $task->is_completed ? 'checked' : '' }}>
             <label class="text-sm text-gray-700">Completed</label>
         </div>
         <div class="flex space-x-3">
             <button type="submit" 
-                    class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded">
+                    class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-5 py-2.5 rounded-lg shadow-sm">
                 Update Task
             </button>
             <a href="{{ route('tasks.index') }}" 

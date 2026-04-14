@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg p-6">
+<div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-8 border-gray-100">
     <h1 class="text-2xl font-bold text-gray-800 mb-6">Task Details</h1>
 
     <div class="space-y-3">
@@ -23,7 +23,7 @@
 
     <div class="mt-6">
         <a href="{{ route('tasks.index') }}" 
-           class="bg-gray-500 hover:bg-gray-600 text-white font-semibold px-4 py-2 rounded">
+           class="bg-gray-500 hover:bg-gray-600 text-white font-semibold px-5 py-2.5 rounded-lg shadow-sm">
             Back
         </a>
     </div>

@@ -7,10 +7,10 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 font-sans">
 
     <!-- Navbar -->
-    <nav class="bg-gray-900 shadow mb-6">
+    <nav class="bg-indigo-700 shadow-lg mb-6">
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="{{ route('tasks.index') }}" class="text-white font-bold text-lg">
                 Task Manager
