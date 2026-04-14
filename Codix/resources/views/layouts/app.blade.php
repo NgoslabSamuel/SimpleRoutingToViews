@@ -13,7 +13,7 @@
     <nav class="bg-indigo-700 shadow-lg mb-6">
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="{{ route('tasks.index') }}" class="text-white font-bold text-lg">
-                Task Manager
+                Task Dashboard
             </a>
         </div>
     </nav>

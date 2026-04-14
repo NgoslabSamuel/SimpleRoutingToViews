@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="max-w-6xl mx-auto px-4">
-    <h1 class="text-3xl font-bold text-gray-800 mb-6">Task Manager</h1>
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Manage Tasks</h1>
 
     <a href="{{ route('tasks.create') }}" 
        class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded mb-4">
