@@ -1,20 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h1>Create Task</h1>
-    <form action="{{ route('tasks.store') }}" method="POST">
+<div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg p-8 border border-gray-100">
+    <h1 class="text-2xl font-bold text-gray-800 mb-6">Create Task</h1>
+
+    <form action="{{ route('tasks.store') }}" method="POST" class="space-y-4">
         @csrf
-        <div class="mb-3">
-            <label class="form-label">Title</label>
-            <input type="text" name="title" class="form-control" required>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Title</label>
+            <input type="text" name="title" 
+                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring focus:ring-indigo-200 focus:border-indigo-500" 
+                   required>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Description</label>
-            <textarea name="description" class="form-control"></textarea>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+            <textarea name="description" 
+                      class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring focus:ring-indigo-200 focus:border-indigo-500"></textarea>
         </div>
-        <button type="submit" class="btn btn-success">Save Task</button>
-        <a href="{{ route('tasks.index') }}" class="btn btn-secondary">Cancel</a>
+        <div class="flex space-x-3">
+            <button type="submit" 
+                    class="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">
+                Save Task
+            </button>
+            <a href="{{ route('tasks.index') }}" 
+               class="bg-gray-500 hover:bg-gray-600 text-white font-semibold px-4 py-2 rounded">
+                Cancel
+            </a>
+        </div>
     </form>
 </div>
 @endsection
