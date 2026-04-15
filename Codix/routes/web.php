@@ -12,10 +12,8 @@ Route::get('/hello', function () {
 // Greet route
 Route::get('/greet', [GreetController::class, 'show']);
 
-// Redirect homepage to Task Manager
-Route::get('/', function () {
-    return redirect()->route('tasks.index');
-});
+// Homepage now shows Greet page
+Route::get('/', [GreetController::class, 'show']);
 
 // Resource routes for Task CRUD
 Route::resource('tasks', TaskController::class);
